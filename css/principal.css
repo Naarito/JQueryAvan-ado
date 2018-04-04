@@ -1,0 +1,141 @@
+.borda {
+    border-radius: 20px;
+    border: solid 3px purple;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.frase {
+    font-size: 18px;
+    text-align: left;
+}
+
+.enunciado {
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.campo-digitacao {
+    font-size: 16px;
+    height: 100px;
+    background-color: rgb(249, 249, 249);
+    border-radius: 6px;
+    text-align: left;
+    border: 4px solid black;
+}
+
+.campo-desabilitado {
+    background-color: #c3c0c0;
+}
+
+.icones {
+    vertical-align: middle;
+}
+
+.borda-campo-OK {
+    border: 4px solid rgb(92, 184, 92);
+}
+
+.borda-campo-NOK {
+    border: 4px solid rgb(217, 83, 79);
+}
+
+.placar {
+    display: none;
+    border: solid black 4px;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+body {
+    overflow: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin bottom 20px;
+}
+
+#erroAjax {
+    display: none;
+    font-size: 20px;
+    border: solid red 3px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.erroCopia {
+    display: none;
+    border: solid red 3px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+#erroCopiaP {
+    margin 0px;
+}
+
+#erroCopiaH3 {
+    margin: 0px;
+}
+
+#spinner {
+    vertical-align: middle;
+    display: none;
+}
+
+#select-id {
+    width: 35px;
+    height: 55px;
+    margin: 5px;
+    font-size: 25px;
+}
+
+#botao-sync {
+    margin-top: 7px;
+    float: right;
+}
+
+.select-usuarios {
+    display: inline-block;
+}
+
+#usuarios {
+    display: block;
+}
+
+.selectize-input {
+    width: 200px;
+    vertical-align: middle;
+    font-size: 25px;
+    border: solid 3px;
+}
+
+.jogador {
+    display: inline-block;
+    font-size: 25px;
+    height: 55px;
+    text-align: middle;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="css/libs/tooltipster-sideTip-punk.min.css">
+    <link rel="stylesheet" href="css/principal.css">
+</head>
+
+<body class="blue lighten-5">
+    <main>
+        <div class="container borda deep-purple lighten-4">
+            <h1 class="center">Typing Game</h1>
+            <p class="enunciado center">O jogo da digitação: Você tem <span id="tempo-enunciado">10</span> segundos para transcrever <span class="green-text">fielmente</span> a citação abaixo. Caso você termine o jogo com um erro (a borda da tela estará <span class="red-text">vermelha</span>) seus pontos serão anulados e você não entra no placar!</p>
+            <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <div class="center">
+                <p id="erroAjax" class="red-text"> Ocorreu um erro na sua requisição AJAX, certifique-se de que o servidor está iniciado no Node.JS</p>
+                <div class="erroCopia red-text">
+                    <h3 id="erroCopiaH3"> GAME OVER </h3>
+                    <p id="erroCopiaP"> Você errou na sua transcrição, mais sorte na próxima!</p>
+                </div>
+            </div>
+
+            <ul class="informacoes center">
+                <li><i class="material-icons icones">assignment</i><span id="tamanho-Frase">0</span> Palavras</li>
+                <li><i class="material-icons icones">access_time</i><span id="tempo-digitacao">10</span> Segundos</li>
+            </ul>
+
+            <textarea class="campo-digitacao center" rows="8" cols="40"></textarea>
+
+            <div class="botoes">
+                <button id="botao-reiniciar" class="tooltip btn-floating btn-large waves-effect waves-light red" title="Restart"><i class="material-icons">sync</i></button>
+                <button id="botao-placar" class="tooltip btn-floating btn-large waves-effect waves-light blue" title="Scoreboard"><i class="material-icons">format_list_numbered</i></button>
+                <button id="botao-frase" class="tooltip btn-floating btn-large waves-effect waves-light green" title="Frase Aleatória"><i class="material-icons">shuffle</i></button>
+                <button id="botao-select" class="tooltip btn-floating btn-large waves-effect waves-light cyan" title="Selecionar Frase"><i class="material-icons">view_list</i></button>
+                <p class="jogador cyan-text">:</p>
+                <input type="number" class="cyan-text" id="select-id" min="0" max="9">
+                <p class="jogador purple-text">Jogador:</p>
+                <div class="select-usuarios">
+                    <select id="usuarios" class="purple-text">
+                        <option value="Narito">Narito</option>
+                        <option value="Leri">Leri</option>
+                        <option value="Ryuk">Ryuk</option>
+                    </select>
+                </div>
+
+                <!--UX-->
+                <img src="img/spinner.gif" alt="spinner" id="spinner">
+                <button id="botao-sync" class="tooltip btn-floating btn-large waves-effect waves-light yellow" title="Sincroniza Dados"><i class="material-icons">save</i></button>
+            </div>
+
+            <ul class="center">
+                <li><i class="material-icons icones">font_download</i><span id="contador-caracteres">0</span> Caracteres</li>
+                <li><i class="material-icons icones">text_fields</i><span id="contador-palavras">0</span> Palavras</li>
+            </ul>
+
+            <section class="placar">
+                <h2 class="center">Placar</h2>
+                <table class="striped centered">
+                    <thead>
+                        <tr class="">
+                            <th><i class="material-icons icones">person</i>Nome:</th>
+                            <th><i class="material-icons icones">text_fields</i>Nº de Palavras:</th>
+                            <th><i class="material-icons icones">remove_circle</i></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Bot</td>
+                            <td>36 Palavras</td>
+                            <td><button class="botao-remover"><i class="material-icons icones">delete</i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <footer class="page-footer purple">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Matheus Narito Yoneoka
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/ScriptGeral.js"></script>
+    <script src="js/ScriptPlacar.js"></script>
+    <script src="js/ScriptFrase.js"></script>
+    <script src="js/selectize.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+
+</body>
+
+</html>
